@@ -208,4 +208,14 @@ public class IntegerListImpl implements IntegerList {
      private void grow(){
         storage = Arrays.copyOf(storage,size + size / 2);
      }
+     public void sort2(Integer[] arr) {
+        for (int i = 0; i <= arr.length; i ++) {
+            int temp = arr[i]; int j = i;
+            while (j>0 && arr[j-1] >= temp) {
+                arr[j] = arr[j-1];
+                i--;
+            }
+            arr[j] = temp;
+        }
+     }
 }
